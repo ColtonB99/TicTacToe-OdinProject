@@ -378,6 +378,35 @@ const Game = () => {
                 }
                 
             }
+
+            // Default behavior if no conditions are met
+            setTimeout(() => {
+                if (whosTurn == 1) {
+                    console.log("Default Behavior")
+                    // Located All Open Tiles
+                    var openTiles = [];
+                    TicTacToeBoxes.forEach(element => {
+                        if (element.style.backgroundImage == "") {
+                            openTiles.push(element);
+                        }
+                    });
+                    
+                    // Generate A Random Move Position
+                    let randomNum = Math.floor(Math.random() * openTiles.length);
+
+                    // Make The Move
+                    console.log(`No specific move found, making a random move.`);
+                    if (openTiles.length > 0) {
+                        openTiles[randomNum].style.backgroundImage = "url('o.png')";
+                        oPositions.push(parseInt(openTiles[randomNum].getAttribute("id").match(/\d+/)[0]));
+                        checkWin();
+                        whosTurn = 0;
+                    }
+                }
+            }, 700);
+
+
+
         } else if (difficulty == 2) {
 
             // Hard Mode
@@ -550,6 +579,37 @@ const Game = () => {
                 }
                 
             }
+
+
+            // Default behavior if no conditions are met
+            setTimeout(() => {
+                if (whosTurn == 1) {
+                    console.log("Default Behavior")
+                    // Located All Open Tiles
+                    var openTiles = [];
+                    TicTacToeBoxes.forEach(element => {
+                        if (element.style.backgroundImage == "") {
+                            openTiles.push(element);
+                        }
+                    });
+                    
+                    // Generate A Random Move Position
+                    let randomNum = Math.floor(Math.random() * openTiles.length);
+
+                    // Make The Move
+                    console.log(`No specific move found, making a random move.`);
+                    if (openTiles.length > 0) {
+                        openTiles[randomNum].style.backgroundImage = "url('o.png')";
+                        oPositions.push(parseInt(openTiles[randomNum].getAttribute("id").match(/\d+/)[0]));
+                        checkWin();
+                        whosTurn = 0;
+                    }
+                }
+            }, 700);
+
+
+
+
         }
 
     }
