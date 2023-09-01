@@ -1,0 +1,75 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="loginScreen">
+        <div class="login-content">
+            <h1>Choose Your Gamemode</h1>
+            <div class="ai-Wrapper">
+                <img src="robot.svg" alt="" srcset="">
+                <p>Play Against AI</p>
+            </div>
+            <div class="friends-wrapper">
+                <img src="friends.svg" alt="" srcset="">
+                <p>Play Against Friends</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gameScreen">
+        
+        <div class="winnerAnnouncement">
+            <div class="content-wrapper">
+                <p>{Player} Won The Round!</p>
+            </div>
+        </div>
+
+        <div class="difficulty-wrap">
+            <form id="difficulty" action="#">
+                <label for="lang">Difficulty</label>
+                <select name="languages" id="lang">
+                  <option value="0">Easy</option>
+                  <option value="1">Medium</option>
+                  <option value="2">Hard</option>
+                </select>
+          </form>
+        </div>
+
+        <div class="scoreboard">
+            <div class="content-wrap">
+                <p id="scoreboard-header">Scoreboard:</p>
+                <div class="score-wrap">
+                    
+                    <p class="playerScore">You: 0</p>
+                    <p class="enemyScore">AI: 0</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="TicTacToe">
+            <div class="gamebox" id="1"></div>
+            <div class="gamebox" id="2"></div>
+            <div class="gamebox" id="3"></div>
+            <div class="gamebox" id="4"></div>
+            <div class="gamebox" id="5"></div>
+            <div class="gamebox" id="6"></div>
+            <div class="gamebox" id="7"></div>
+            <div class="gamebox" id="8"></div>
+            <div class="gamebox" id="9"></div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
